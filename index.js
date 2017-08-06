@@ -4,7 +4,7 @@ var mysql = require('mysql')//mysql模块
 var schedule = require('node-schedule');
 // 数据库配置
 var conn = mysql.createConnection({
-	host:'119.29.201.31',
+	host:' . . . ',
 	user:'root',
 	password:'root',
 	database:'nodemysql',
@@ -27,8 +27,8 @@ function scheduleRecurrenceRule(){
 // Authorization生成
 function getAuth(){
 	var md5 = crypto.createHash('md5');//引入md5加密
-	var apikey = "ecde8ce10c0148e7920dea692346fc2a";
-	var secretKey = "7086d528bc6f4a10823a341f62a30b76";
+	var apikey = " ";
+	var secretKey = " ";
 	var time = new Date().getTime();
 	var addStr = apikey + secretKey + time;
 	var md5Str = md5.update(addStr).digest('hex')
@@ -63,7 +63,7 @@ function sendMsg(p2,p3,p4){
 		},
 		body:{
 			messageSign: '治电科技',
-		    mobile: '15755022403',
+		    mobile: ' ',
 		    needReceipt: 0,
 		    receiptNotificationURL: '',
 		    templateId: 1344,
